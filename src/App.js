@@ -1,10 +1,16 @@
 import React from 'react'
+import { ChatEngine } from 'react-chat-engine'
+import ChatFeed from './components/ChatFeed'
 
 function App() {
   return (
-    <div>
-      <h1>hi</h1>
-    </div>
+    <ChatEngine
+      height='100vh'
+      projectID=''
+      userName=''
+      userSecret=''
+      renderChatFeed={(chatAppProps) => <ChatFeed {...chatAppProps} />}
+    />
   )
 }
 
